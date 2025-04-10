@@ -37,7 +37,7 @@ export class SignalRConnectionManager {
 
   private buildConnection() {
     this.connection = new signalR.HubConnectionBuilder()
-      .withUrl(`${process.env.NEXT_PUBLIC_BASE_URL}/movieMatcherHub`, {
+      .withUrl(`/movieMatcherHub`, {
         withCredentials: true,
       })
       .withAutomaticReconnect([0, 2000, 5000, 10000])
